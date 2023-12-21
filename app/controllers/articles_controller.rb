@@ -3,15 +3,20 @@ class ArticlesController < ApplicationController
 
   def index
     @article = Article.all
+
     render json: ArticleSerializer.new(@article).serializable_hash
   end
 
   def show
     @article = Article.find(params[:id])
+
+    render json: ArticleSerializer.new(@article).serializable_hash
   end
 
   def new
     @article = Article.new
+
+    render json: ArticleSerializer.new(@article).serializable_hash
   end
 
   def create
@@ -26,11 +31,12 @@ class ArticlesController < ApplicationController
 
   def edit
     @article = Article.find(params[:id])
+
+    render json: ArticleSerializer.new(@article).serializable_hash
   end
 
   def update
     @article = Article.find(params[:id])
-
 
     if @article.update(article_params)
       redirect_to @article

@@ -1,0 +1,21 @@
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'bin/**/*'
+    - 'config/**/*'
+
+Style/Documentation:
+  Enabled: false
+Metrics/CyclomaticComplexity:
+  Enabled: false
+Metrics/PerceivedComplexity:
+  Enabled: false
+Metrics/MethodLength:
+  Enabled: true
+  Max: 20
+Metrics/BlockLength:
+  Enabled: true
+  Max: 30
+Layout/LineLength:
+  Enabled: false
+
